@@ -1,0 +1,48 @@
+{
+    "name": "munzevi/passcon",
+    "description": "Authentication Scaffold for Laravel Passport",
+    "keywords": [ "laravel, authentication, passport, controllers, passcon" ],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Burak Kalkuz",
+            "email": "gayet@munzevi.net"
+        }
+    ],
+    "require": {
+        "laravel/framework": "^8.12",
+        "laravel/passport": "^10.1"
+    },
+    "require-dev":{
+        "orchestra/testbench":"^6.0",
+        "phpunit/phpunit":"^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Munzevi\\Passcon\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Munzevi\\Passcon\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Munzevi\\Passcon\\PassconServiceProvider"
+            ],
+            "aliases": {
+                "Passcon": "Munzevi\\Passcon\\Passcon"
+            }
+        }
+    }
+}
